@@ -14,9 +14,8 @@
             '産地' => '北海道'
         ];
         //  配列$user_namesの要素を1つずつ順番に出力する
-        foreach ($score as $score) {
-            echo $score . '<br>';
-        }
+        foreach ($score as $key => $value) {
+            echo "$key : $value<br>";
         }
      ?>
     </p>
