@@ -13,7 +13,7 @@
     public $price;
 
     public function show_price(string $price){
-      $this->name = $price;
+      echo $this->price;
     }
   }
   class Animal{
@@ -21,13 +21,14 @@
     public $height;
     public $weight;
 
-    public function show_height(string $height){
-      $this->name = $height;
+    public function __construct($name, $price) {
+       $this->name = $name; $this->price = $price;
     }
   }
   $price = new Food();
   $height = new Animal();
-  print_r($user);
+
+  print_r($price);
   ?>
   </p>
 </body>
