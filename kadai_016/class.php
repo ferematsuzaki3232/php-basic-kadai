@@ -12,23 +12,28 @@
     public $name;
     public $price;
 
-    public function show_price(string $price){
-      echo $this->price;
-    }
+    public function __construct($name, $price) {
+      $this->name = $name; $this->price = $price;
+      }
   }
   class Animal{
     public $name;
     public $height;
     public $weight;
 
-    public function __construct($name, $price) {
-       $this->name = $name; $this->price = $price;
-    }
+    public function __construct($name, $height, $weight) {
+      $this->name = $name;
+      $this->height = $height;
+      $this->weight = $weight;
   }
-  $price = new Food();
-  $height = new Animal();
+  }
+  $food = new Food('Apple', 150);
+  $animal = new Animal('Dog', 50, 20);
 
+  $food->show_price();
+  
   print_r($price);
+  print_r($animal);
   ?>
   </p>
 </body>
